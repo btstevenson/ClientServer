@@ -7,14 +7,20 @@
 * email address: bstev002@ucr.edu
 *
 *
-* Assignment: Homework #8 Iterative
+* Assignment: Homework #8 Concurrent
 *
 * I hereby certify that the contents of this file represent
 * my own original individual work. Nowhere herein is there
 * code from any outside resources such as another individual,
 * a website, or publishings unless specifically designated as
 * permissible by the instructor or TA. */
+
 #include <stdarg.h>
+
+#define 		DIRDATA			0
+#define			FILEDATA		1
+#define 		PORT			27232
+
 
 #define		ER_RV		unsigned int
 #define		ER_OK		0		/* No error reported */
@@ -36,8 +42,15 @@ void WriteMsg(int code, const char *Message, ...);
 
 struct MsgHeader
 {
-	char	szProg[12];
-	char 	szOpt[3];
-	char	szDir[12];
+	unsigned int 	uiDataType;
+	unsigned int 	uiFileLength;
+	char 			szFileName[256];
+	char 			szDirName[1024];
 };
 typedef struct MsgHeader MsgHeader_t;
+
+struct SockDesc
+{
+	int CliSockDesc;
+};
+typedef struct SockDesc SockDesc_t;
