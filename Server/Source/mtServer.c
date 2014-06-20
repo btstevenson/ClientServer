@@ -1,19 +1,4 @@
-/*
-* Course: CS 100 Winter 2014
-*
-* First Name: Brandon
-* Last Name: Stevenson
-* Username: bstev002
-* email address: bstev002@ucr.edu
-*
-*
-* Assignment: Homework #8 Concurrent
-*
-* I hereby certify that the contents of this file represent
-* my own original individual work. Nowhere herein is there
-* code from any outside resources such as another individual,
-* a website, or publishings unless specifically designated as
-* permissible by the instructor or TA. */
+
 
 #include <sys/types.h>
 #include <sys/stat.h>
